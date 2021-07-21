@@ -1,0 +1,8 @@
+@mixin togglerIcon {
+  display: inline-block;
+  width: 4rem;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 5rem;
+  transition: all 0.5s;
+}

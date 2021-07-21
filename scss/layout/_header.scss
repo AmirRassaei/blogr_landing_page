@@ -1,0 +1,78 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+.header {
+  &-bg {
+    height: 80vh;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-secondary, 0.8),
+        rgba($color-primary, 1)
+      ),
+      url(../../images/bg-pattern-intro.svg);
+    background-position: center;
+    border-radius: 0 0 0 8rem;
+    background-repeat: no-repeat;
+  }
+  .nav {
+    padding: 3rem 2rem;
+    display: flex;
+
+    &__logo--link {
+      color: #fff;
+      font-size: 4rem;
+      text-decoration: none;
+    }
+
+    &__toggler {
+      margin: 1.3rem 0 0 auto;
+      cursor: pointer;
+
+      &--icon {
+        @include togglerIcon();
+        position: relative;
+        top: 7px;
+        left: 0;
+      }
+
+      &--icon::before,
+      &--icon::after {
+        @include togglerIcon();
+        content: "";
+        border-radius: 5rem;
+        position: absolute;
+      }
+      &--icon::before {
+        top: -10px;
+      }
+      &--icon::after {
+        top: 10px;
+      }
+
+      // toggle x
+      &.toggle .nav__toggler--icon {
+        background-color: rgba($color: #000000, $alpha: 0);
+        &::before {
+          top: -4px;
+          transform: rotate(-45deg);
+        }
+        &::after {
+          top: -4px;
+          transform: rotate(-135deg);
+        }
+      }
+    }
+  }
+
+  &__text-box {
+    text-align: center;
+    margin: 0 auto;
+    padding: 15rem 3rem;
+    .header__btns {
+      margin-top: 5rem;
+      .btn:first-child {
+        margin-right: 2rem;
+      }
+    }
+  }
+}
