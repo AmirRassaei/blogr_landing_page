@@ -1,3 +1,5 @@
+@import "./variables";
+
 @mixin togglerIcon {
   display: inline-block;
   width: 4rem;
@@ -5,4 +7,16 @@
   background-color: #fff;
   border-radius: 5rem;
   transition: all 0.5s;
+}
+
+@mixin media-breakpoint-up($breakpoint) {
+  @media screen and (min-width: map-get($map: $grid-breakpoint, $key: $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-down($breakpoint) {
+  @media screen and (max-width: map-get($map: $grid-breakpoint, $key: $breakpoint)) {
+    @content;
+  }
 }

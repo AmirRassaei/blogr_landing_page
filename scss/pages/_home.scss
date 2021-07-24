@@ -1,0 +1,29 @@
+@import "../abstracts/variables";
+
+.feature {
+  &__heading {
+    text-align: center;
+  }
+  &__illustration {
+    height: 50vh;
+    width: 100%;
+    background-image: url("../../images/illustration-editor-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  &__desc-box {
+    margin-top: 4rem;
+    padding: 0 5rem;
+  }
+
+  &__item {
+    margin-bottom: 5rem;
+    p {
+      font-size: 1.8rem;
+      color: $body-color;
+      font-weight: 300;
+      line-height: 2;
+    }
+  }
+}

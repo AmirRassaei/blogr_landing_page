@@ -67,11 +67,16 @@
   &__text-box {
     text-align: center;
     margin: 0 auto;
-    padding: 15rem 3rem;
+    padding: 12rem 3rem;
     .header__btns {
-      margin-top: 5rem;
-      .btn:first-child {
-        margin-right: 2rem;
+      margin-top: 3.2rem;
+      .btn {
+        margin-right: 0.5rem;
+        &:first-child {
+          @include media-breakpoint-up(sm) {
+            margin-right: 2rem;
+          }
+        }
       }
     }
   }

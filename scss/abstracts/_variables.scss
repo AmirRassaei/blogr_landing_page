@@ -3,9 +3,22 @@ $default-font-size: 1.6rem;
 // colors (text)
 $text-primary: #ff525d;
 $text-primary-light: #ff7a85;
-$heading-primary: #1f3f5b;
+$heading-color: #1f3f5b;
+$body-color: #4b5862;
 
 // color
 $color-primary: #ff3d54;
 $color-primary-secondary: #ff8f70;
 $color-white: #fff;
+
+$grid-breakpoint: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+$heading-primary-font-size: 3.6rem;
+$heading-secondary-font-size: 3.2rem;
