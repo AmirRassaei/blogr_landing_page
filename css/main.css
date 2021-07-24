@@ -192,14 +192,14 @@ body {
   background-position: center;
   background-size: contain;
 }
-.feature__desc-box {
+.feature__items {
   margin-top: 4rem;
   padding: 0 5rem;
 }
-.feature__item {
+.feature__items .feature__item {
   margin-bottom: 5rem;
 }
-.feature__item p {
+.feature__items .feature__item p {
   font-size: 1.8rem;
   color: #4b5862;
   font-weight: 300;
