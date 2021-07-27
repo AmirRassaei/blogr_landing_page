@@ -1,4 +1,5 @@
 @import "../abstracts/variables";
+@import "../abstracts/mixins";
 
 .feature {
   &__heading {
@@ -12,10 +13,28 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+
+    @include media-breakpoint-up(xl) {
+      order: 2;
+      height: 80vh;
+      background-image: url("../../images/illustration-editor-desktop.svg");
+    }
   }
+
+  &__box {
+    @include media-breakpoint-up(xl) {
+      flex-direction: row;
+    }
+  }
+
   &__items {
     margin-top: 4rem;
     padding: 0 5rem;
+    text-align: center;
+    @include media-breakpoint-up(xl) {
+      text-align: left;
+    }
+
     .feature__item {
       margin-bottom: 5rem;
       p {

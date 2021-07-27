@@ -192,9 +192,27 @@ body {
   background-position: center;
   background-size: contain;
 }
+@media screen and (min-width: 1200px) {
+  .feature__illustration {
+    order: 2;
+    height: 80vh;
+    background-image: url("../../images/illustration-editor-desktop.svg");
+  }
+}
+@media screen and (min-width: 1200px) {
+  .feature__box {
+    flex-direction: row;
+  }
+}
 .feature__items {
   margin-top: 4rem;
   padding: 0 5rem;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .feature__items {
+    text-align: left;
+  }
 }
 .feature__items .feature__item {
   margin-bottom: 5rem;
