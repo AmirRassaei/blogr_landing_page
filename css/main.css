@@ -95,6 +95,7 @@ body {
 }
 
 .header-bg {
+  position: relative;
   min-height: 80vh;
   background-image: linear-gradient(to right bottom, rgba(255, 143, 112, 0.8), #ff3d54), url(../../images/bg-pattern-intro.svg);
   background-position: center;
@@ -156,7 +157,10 @@ body {
 .header__text-box {
   text-align: center;
   margin: 0 auto;
-  padding: 12rem 3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .header__text-box .header__btns {
   margin-top: 3.2rem;
