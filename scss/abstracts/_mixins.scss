@@ -19,6 +19,15 @@
   @media screen and (max-width: map-get($map: $grid-breakpoint, $key: $breakpoint)) {
     @content;
   }
+
+  /* 
+  or you could use @if
+
+  @if $breakpoint == sm {
+    @media (min-width: x)
+  }
+  
+  */
 }
 
 @mixin absoluteCenter {

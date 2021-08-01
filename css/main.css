@@ -1,5 +1,15 @@
 html {
-  font-size: 62.5%;
+  font-size: 50%;
+}
+@media screen and (min-width: 576px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 68%;
+  }
 }
 
 body {
@@ -29,13 +39,14 @@ body {
   font-family: "overpass";
   color: #fff;
   font-size: 3.6rem;
+  font-weight: 600;
   margin-bottom: 1.5rem;
 }
 
 .heading-secondary {
   font-family: "overpass";
   color: #1f3f5b;
-  font-size: 3.2rem;
+  font-size: 3rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
 }
@@ -43,7 +54,7 @@ body {
 .heading-tertiary {
   font-family: "overpass";
   color: #1f3f5b;
-  font-size: 2.8rem;
+  font-size: 2.7rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
 }
@@ -56,9 +67,25 @@ body {
   margin-bottom: 1.5rem;
 }
 
+.feature__item {
+  margin-bottom: 5rem;
+  padding: 0 1rem;
+}
+.feature__item .item__text {
+  color: #4b5862;
+  font-weight: 300;
+  line-height: 2;
+}
+
 .container {
-  width: 85%;
+  width: 95%;
   margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    margin: 0 auto;
+    width: 90%;
+  }
 }
 
 .flex-row-center {
@@ -96,15 +123,25 @@ body {
 
 .header-bg {
   position: relative;
-  min-height: 80vh;
+  min-height: 70vh;
   background-image: linear-gradient(to right bottom, rgba(255, 143, 112, 0.8), #ff3d54), url(../../images/bg-pattern-intro.svg);
   background-position: center;
   border-radius: 0 0 0 8rem;
   background-repeat: no-repeat;
 }
+@media screen and (min-width: 768px) {
+  .header-bg {
+    min-height: 80vh;
+  }
+}
 .header .nav {
-  padding: 3rem 2rem;
+  padding: 2rem;
   display: flex;
+}
+@media screen and (min-width: 768px) {
+  .header .nav {
+    padding: 3rem 8rem;
+  }
 }
 .header .nav__logo--link {
   color: #fff;
@@ -156,7 +193,7 @@ body {
 }
 .header__text-box {
   text-align: center;
-  margin: 0 auto;
+  width: 90%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -166,7 +203,7 @@ body {
   margin-top: 3.2rem;
 }
 .header__text-box .header__btns .btn {
-  margin-right: 0.5rem;
+  margin: 0 0.5rem 1rem 0;
 }
 @media screen and (min-width: 576px) {
   .header__text-box .header__btns .btn:first-child {
@@ -175,6 +212,7 @@ body {
 }
 
 .btn {
+  width: 15rem;
   display: inline-block;
   background-color: #ccc;
   padding: 1rem 2rem;
@@ -193,47 +231,56 @@ body {
   background-color: #ff7a85;
 }
 
+.feature {
+  padding: 8rem 0;
+  overflow: hidden;
+}
 .feature__heading {
   text-align: center;
-}
-.feature__illustration {
-  height: 50vh;
-  width: 100%;
-  background-image: url("../../images/illustration-editor-mobile.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-@media screen and (min-width: 1200px) {
-  .feature__illustration {
-    order: 2;
-    height: 80vh;
-    background-image: url("../../images/illustration-editor-desktop.svg");
-  }
 }
 @media screen and (min-width: 1200px) {
   .feature__box {
     flex-direction: row;
   }
 }
+.feature__illustration {
+  height: 40vh;
+  width: 100%;
+  background-image: url("../../images/illustration-editor-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+@media screen and (min-width: 768px) {
+  .feature__illustration {
+    min-height: 50vh;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .feature__illustration {
+    order: 2;
+    width: 100%;
+    height: 70vh;
+    background-image: url("../../images/illustration-editor-desktop.svg");
+    margin-left: 10rem;
+    background-position: right center;
+  }
+}
 .feature__items {
-  margin-top: 4rem;
-  padding: 0 5rem;
+  margin: 3rem 0 0 0;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .feature__items {
+    margin-top: 5rem;
+  }
 }
 @media screen and (min-width: 1200px) {
   .feature__items {
+    padding: 0 15rem;
+    margin-top: 3rem;
     text-align: left;
   }
-}
-.feature__items .feature__item {
-  margin-bottom: 5rem;
-}
-.feature__items .feature__item p {
-  font-size: 1.8rem;
-  color: #4b5862;
-  font-weight: 300;
-  line-height: 2;
 }
 
 /*# sourceMappingURL=main.css.map */

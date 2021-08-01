@@ -9,6 +9,7 @@ body {
   font-family: "overpass";
   color: #fff;
   font-size: $heading-primary-font-size;
+  font-weight: 600;
   margin-bottom: 1.5rem;
 }
 
@@ -34,4 +35,17 @@ body {
   font-size: 1.6rem;
   font-weight: 300;
   margin-bottom: 1.5rem;
+}
+
+// feature section
+.feature {
+  &__item {
+    margin-bottom: 5rem;
+    padding: 0 1rem;
+    .item__text {
+      color: $body-color;
+      font-weight: 300;
+      line-height: 2;
+    }
+  }
 }

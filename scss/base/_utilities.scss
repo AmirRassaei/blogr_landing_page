@@ -1,6 +1,13 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
 .container {
-  width: 85%;
+  width: 95%;
   margin: 0 auto;
+  @include media-breakpoint-up(md) {
+    margin: 0 auto;
+    width: 90%;
+  }
 }
 
 .flex-row-center {

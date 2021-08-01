@@ -1,6 +1,12 @@
 html {
   // This defines what 1rem is
-  font-size: 62.5%;
+  font-size: 50%;
+  @include media-breakpoint-up(sm) {
+    font-size: 62.5%;
+  }
+  @include media-breakpoint-up(lg) {
+    font-size: 68%;
+  }
 }
 
 body {
