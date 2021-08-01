@@ -37,11 +37,20 @@ body {
   margin-bottom: 1.5rem;
 }
 
+// header
+.header {
+  &__heading--primary {
+    font-size: 3.6rem;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 4.2rem;
+    }
+  }
+}
+
 // feature section
 .feature {
   &__item {
-    margin-bottom: 5rem;
-    padding: 0 1rem;
     .item__text {
       color: $body-color;
       font-weight: 300;

@@ -4,7 +4,7 @@
 .header {
   &-bg {
     position: relative;
-    min-height: 70vh;
+    min-height: 65vh;
     background-image: linear-gradient(
         to right bottom,
         rgba($color-primary-secondary, 0.8),
@@ -22,7 +22,7 @@
     padding: 2rem;
     display: flex;
     @include media-breakpoint-up(md) {
-      padding: 3rem 8rem;
+      padding: 3rem 12rem;
     }
     &__logo--link {
       color: #fff;
