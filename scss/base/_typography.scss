@@ -49,12 +49,26 @@ body {
 }
 
 // feature section
-.feature {
-  &__item {
+
+.item__text {
+  color: $body-color;
+  font-weight: 300;
+  line-height: 2;
+}
+
+.feature--two {
+  .feature__item {
+    text-align: center;
+    .item__heading {
+      text-transform: capitalize;
+      color: #fff;
+      font-size: 3.2rem;
+      @include media-breakpoint-up(md) {
+        font-size: 3.8rem;
+      }
+    }
     .item__text {
-      color: $body-color;
-      font-weight: 300;
-      line-height: 2;
+      color: #f7f7f7;
     }
   }
 }

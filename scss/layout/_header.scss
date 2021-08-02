@@ -12,7 +12,7 @@
       ),
       url(../../images/bg-pattern-intro.svg);
     background-position: center;
-    border-radius: 0 0 0 8rem;
+    border-radius: 0 0 0 $sec-border-radius;
     background-repeat: no-repeat;
     @include media-breakpoint-up(md) {
       min-height: 80vh;
