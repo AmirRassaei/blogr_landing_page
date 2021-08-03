@@ -4,7 +4,8 @@
 .header {
   &-bg {
     position: relative;
-    min-height: 65vh;
+    min-height: 60rem;
+    height: 65vh;
     background-image: linear-gradient(
         to right bottom,
         rgba($color-primary-secondary, 0.8),
@@ -14,8 +15,9 @@
     background-position: center;
     border-radius: 0 0 0 $sec-border-radius;
     background-repeat: no-repeat;
-    @include media-breakpoint-up(md) {
-      min-height: 80vh;
+
+    @include media-breakpoint-up(xl) {
+      height: 80vh;
     }
   }
   .nav {

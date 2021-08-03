@@ -6,7 +6,7 @@
   overflow: hidden;
   position: relative;
   @include media-breakpoint-up(xl) {
-    padding: 15rem 0 25rem 0;
+    padding: 15rem 0 30rem 0;
   }
   .feature {
     &__heading {
@@ -22,25 +22,21 @@
     }
 
     &__illustration {
+      @include svgSetup("../../images/illustration-editor-mobile.svg");
+      position: static;
       height: 30rem;
-      width: 100%;
-      background-image: url("../../images/illustration-editor-mobile.svg");
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: contain;
+
       @include media-breakpoint-up(md) {
         height: 35rem;
       }
 
       @include media-breakpoint-up(xl) {
-        width: 100%;
+        @include svgSetup("../../images/illustration-editor-desktop.svg");
         height: 75rem;
-        background-image: url("../../images/illustration-editor-desktop.svg");
-        margin-left: 10rem;
         background-position: right center;
-        position: absolute;
         top: 5rem;
         right: -23rem;
+        margin-left: 10rem;
       }
     }
 
@@ -67,15 +63,18 @@
 .feature--two {
   // aligning the phone illustration
   position: relative;
-
+  margin-bottom: 100rem;
   // holding the text and aligning the circle
-  .content-box {
-    min-height: 50rem;
-    height: 80vh;
+  .feature__box {
+    min-height: 60rem;
+    height: 75vh;
     position: relative;
+
+    // overflow hidden for circle illus
     overflow: hidden;
+
     // adding more white space around the content = feature__text-box
-    padding: 0 5rem;
+    // padding: 0 5rem;
     border-radius: 0 $sec-border-radius 0 $sec-border-radius;
     background-image: linear-gradient(
       to right bottom,
@@ -83,39 +82,71 @@
       $color-gradient-end
     );
 
+    // smaller height on bigger screen
+    @include media-breakpoint-up(sm) {
+      height: 60vh;
+    }
+    @include media-breakpoint-up(xl) {
+      min-height: 30rem;
+      height: 45vh;
+    }
+
     .feature__illustration-circle {
-      width: 100%;
+      @include svgSetup("../../images/bg-pattern-circles.svg");
+      min-height: 30rem;
       height: 70vh;
-      background-image: url(../../images/bg-pattern-circles.svg);
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      position: absolute;
       top: -25vh;
       left: 0;
       transform: scale(1.4);
+      // the height of the section decreases on larger screens so the circle should be smaller as well
+      @include media-breakpoint-up(sm) {
+        height: 65vh;
+      }
+      @include media-breakpoint-up(xl) {
+        min-height: 50rem;
+        height: 70vh;
+        width: 50%;
+        left: -5vw;
+        top: -80%;
+        transform: scale(1.8);
+      }
     }
+
     .feature__item {
-      position: relative;
-      top: 30vh;
+      position: absolute;
+      padding: 0 2rem;
+      top: 40%;
       left: 0;
       z-index: 2;
+      @include media-breakpoint-up(md) {
+        top: 50%;
+        transform: translate(0, -50%);
+        padding: 0 5rem;
+      }
+      @include media-breakpoint-up(xl) {
+        text-align: left;
+        margin-left: 50%;
+        padding: 5rem;
+      }
     }
   }
 
   .feature__illustration-phone {
-    width: 100%;
+    @include svgSetup("../../images/illustration-phones.svg");
+    min-height: 35rem;
     height: 50vh;
-    background-image: url(../../images/illustration-phones.svg);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: absolute;
     top: -25vh;
     left: 0;
     @include media-breakpoint-up(md) {
-      height: 60vh;
-      top: -30vh;
+      height: 45vh;
+      top: -22vh;
+    }
+    @include media-breakpoint-up(xl) {
+      min-height: 45rem;
+      height: 70vh;
+      top: -25%;
+      width: 40%;
+      left: 0;
     }
   }
 }

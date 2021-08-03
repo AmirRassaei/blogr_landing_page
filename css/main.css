@@ -8,7 +8,7 @@ html {
 }
 @media screen and (min-width: 992px) {
   html {
-    font-size: 68%;
+    font-size: 68.75%;
   }
 }
 
@@ -92,7 +92,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .feature--two .feature__item .item__heading {
-    font-size: 3.8rem;
+    font-size: 3.4rem;
   }
 }
 .feature--two .feature__item .item__text {
@@ -145,15 +145,16 @@ body {
 
 .header-bg {
   position: relative;
-  min-height: 65vh;
+  min-height: 60rem;
+  height: 65vh;
   background-image: linear-gradient(to right bottom, rgba(255, 143, 112, 0.8), #ff3d54), url(../../images/bg-pattern-intro.svg);
   background-position: center;
   border-radius: 0 0 0 8rem;
   background-repeat: no-repeat;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .header-bg {
-    min-height: 80vh;
+    height: 80vh;
   }
 }
 .header .nav {
@@ -245,12 +246,17 @@ body {
   background-color: #fff;
   color: #ff525d;
 }
+.btn-fill:hover {
+  background-color: #ff525d;
+  color: #fff;
+}
 .btn-outline {
   background-color: transparent;
   border: 1px solid #fff;
 }
 .btn-outline:hover {
-  background-color: #ff7a85;
+  background-color: #fff;
+  color: #ff525d;
 }
 
 .feature--one {
@@ -260,7 +266,7 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .feature--one {
-    padding: 15rem 0 25rem 0;
+    padding: 15rem 0 30rem 0;
   }
 }
 .feature--one .feature__heading {
@@ -272,12 +278,14 @@ body {
   }
 }
 .feature--one .feature__illustration {
-  height: 30rem;
   width: 100%;
   background-image: url("../../images/illustration-editor-mobile.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
   background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  position: static;
+  height: 30rem;
 }
 @media screen and (min-width: 768px) {
   .feature--one .feature__illustration {
@@ -287,13 +295,16 @@ body {
 @media screen and (min-width: 1200px) {
   .feature--one .feature__illustration {
     width: 100%;
-    height: 75rem;
     background-image: url("../../images/illustration-editor-desktop.svg");
-    margin-left: 10rem;
-    background-position: right center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     position: absolute;
+    height: 75rem;
+    background-position: right center;
     top: 5rem;
     right: -23rem;
+    margin-left: 10rem;
   }
 }
 .feature--one .feature__items {
@@ -320,49 +331,101 @@ body {
 
 .feature--two {
   position: relative;
+  margin-bottom: 100rem;
 }
-.feature--two .content-box {
-  min-height: 50rem;
-  height: 80vh;
+.feature--two .feature__box {
+  min-height: 60rem;
+  height: 75vh;
   position: relative;
   overflow: hidden;
-  padding: 0 5rem;
   border-radius: 0 8rem 0 8rem;
   background-image: linear-gradient(to right bottom, #292a3c, #3e4164);
 }
-.feature--two .content-box .feature__illustration-circle {
+@media screen and (min-width: 576px) {
+  .feature--two .feature__box {
+    height: 60vh;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .feature--two .feature__box {
+    min-height: 30rem;
+    height: 45vh;
+  }
+}
+.feature--two .feature__box .feature__illustration-circle {
   width: 100%;
-  height: 70vh;
-  background-image: url(../../images/bg-pattern-circles.svg);
+  background-image: url("../../images/bg-pattern-circles.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
+  min-height: 30rem;
+  height: 70vh;
   top: -25vh;
   left: 0;
   transform: scale(1.4);
 }
-.feature--two .content-box .feature__item {
-  position: relative;
-  top: 30vh;
+@media screen and (min-width: 576px) {
+  .feature--two .feature__box .feature__illustration-circle {
+    height: 65vh;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .feature--two .feature__box .feature__illustration-circle {
+    min-height: 50rem;
+    height: 70vh;
+    width: 50%;
+    left: -5vw;
+    top: -80%;
+    transform: scale(1.8);
+  }
+}
+.feature--two .feature__box .feature__item {
+  position: absolute;
+  padding: 0 2rem;
+  top: 40%;
   left: 0;
   z-index: 2;
 }
+@media screen and (min-width: 768px) {
+  .feature--two .feature__box .feature__item {
+    top: 50%;
+    transform: translate(0, -50%);
+    padding: 0 5rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .feature--two .feature__box .feature__item {
+    text-align: left;
+    margin-left: 50%;
+    padding: 5rem;
+  }
+}
 .feature--two .feature__illustration-phone {
   width: 100%;
-  height: 50vh;
-  background-image: url(../../images/illustration-phones.svg);
+  background-image: url("../../images/illustration-phones.svg");
   background-size: contain;
-  background-position: center;
   background-repeat: no-repeat;
+  background-position: center;
   position: absolute;
+  min-height: 35rem;
+  height: 50vh;
   top: -25vh;
   left: 0;
 }
 @media screen and (min-width: 768px) {
   .feature--two .feature__illustration-phone {
-    height: 60vh;
-    top: -30vh;
+    height: 45vh;
+    top: -22vh;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .feature--two .feature__illustration-phone {
+    min-height: 45rem;
+    height: 70vh;
+    top: -25%;
+    width: 40%;
+    left: 0;
   }
 }
 

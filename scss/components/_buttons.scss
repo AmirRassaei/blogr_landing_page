@@ -10,12 +10,17 @@
   &-fill {
     background-color: #fff;
     color: $text-primary;
+    &:hover {
+      background-color: $text-primary;
+      color: $color-white;
+    }
   }
   &-outline {
     background-color: transparent;
     border: 1px solid #fff;
     &:hover {
-      background-color: $text-primary-light;
+      background-color: $color-white;
+      color: $text-primary;
     }
   }
 }
