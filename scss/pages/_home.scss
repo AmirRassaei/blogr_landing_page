@@ -5,57 +5,69 @@
   padding: 8rem 0 30rem 0;
   overflow: hidden;
   position: relative;
+
   @include media-breakpoint-up(xl) {
-    padding: 15rem 0 30rem 0;
+    padding: 15rem 0 0 0;
   }
+
   .feature {
     &__heading {
       text-align: center;
     }
 
-    // box = items + illusteration
+    // box = feature__items + illusteration
     &__box {
+      display: flex;
+      flex-direction: column;
+      // changing flex direction in xl
       @include media-breakpoint-up(xl) {
-        // flex-direction: row;
-        display: block;
+        flex-direction: row;
       }
     }
 
     &__illustration {
-      @include svgSetup("../../images/illustration-editor-mobile.svg");
-      position: static;
+      @include svgSetup("../../images/illustration-editor-mobile.svg", static);
       height: 30rem;
-
       @include media-breakpoint-up(md) {
         height: 35rem;
       }
 
       @include media-breakpoint-up(xl) {
-        @include svgSetup("../../images/illustration-editor-desktop.svg");
-        width: 50%;
+        @include svgSetup(
+          "../../images/illustration-editor-desktop.svg",
+          static
+        );
+        order: 1;
         height: 75rem;
-        background-position: right center;
-        top: 5rem;
-        right: -23rem;
-        margin-left: 10rem;
+        transform: translateX(28%) translateY(-20%);
       }
     }
 
     &__items {
-      margin: 3rem 0 0 0;
+      padding: 0 2rem;
+      margin: 3rem auto 0 auto;
       text-align: center;
+
       @include media-breakpoint-up(md) {
+        padding: 0 6rem;
         margin-top: 5rem;
       }
+
       @include media-breakpoint-up(xl) {
-        width: 50%;
-        padding: 0 0rem 0 10rem;
-        margin-top: 6rem;
+        // item width = illus width
+        width: 100%;
+
+        // padding left is related to logo position
+        padding: 0 0 0 17rem;
+
+        // text position is related to edge of illusteration
+        margin-top: 5.5rem;
+
         text-align: left;
       }
+
       .feature__item {
         margin-bottom: 4rem;
-        padding: 0 1rem;
       }
     }
   }

@@ -8,7 +8,7 @@ html {
 }
 @media screen and (min-width: 992px) {
   html {
-    font-size: 68.75%;
+    font-size: 75%;
   }
 }
 
@@ -266,15 +266,19 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .feature--one {
-    padding: 15rem 0 30rem 0;
+    padding: 15rem 0 0 0;
   }
 }
 .feature--one .feature__heading {
   text-align: center;
 }
+.feature--one .feature__box {
+  display: flex;
+  flex-direction: column;
+}
 @media screen and (min-width: 1200px) {
   .feature--one .feature__box {
-    display: block;
+    flex-direction: row;
   }
 }
 .feature--one .feature__illustration {
@@ -283,7 +287,6 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  position: absolute;
   position: static;
   height: 30rem;
 }
@@ -299,35 +302,33 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    position: absolute;
-    width: 50%;
+    position: static;
+    order: 1;
     height: 75rem;
-    background-position: right center;
-    top: 5rem;
-    right: -23rem;
-    margin-left: 10rem;
+    transform: translateX(28%) translateY(-20%);
   }
 }
 .feature--one .feature__items {
-  margin: 3rem 0 0 0;
+  padding: 0 2rem;
+  margin: 3rem auto 0 auto;
   text-align: center;
 }
 @media screen and (min-width: 768px) {
   .feature--one .feature__items {
+    padding: 0 6rem;
     margin-top: 5rem;
   }
 }
 @media screen and (min-width: 1200px) {
   .feature--one .feature__items {
-    width: 50%;
-    padding: 0 0rem 0 10rem;
-    margin-top: 6rem;
+    width: 100%;
+    padding: 0 0 0 17rem;
+    margin-top: 5.5rem;
     text-align: left;
   }
 }
 .feature--one .feature__items .feature__item {
   margin-bottom: 4rem;
-  padding: 0 1rem;
 }
 
 .feature--two {
