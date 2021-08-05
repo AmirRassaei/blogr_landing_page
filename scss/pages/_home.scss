@@ -32,6 +32,7 @@
 
       @include media-breakpoint-up(xl) {
         @include svgSetup("../../images/illustration-editor-desktop.svg");
+        width: 50%;
         height: 75rem;
         background-position: right center;
         top: 5rem;
@@ -63,7 +64,6 @@
 .feature--two {
   // aligning the phone illustration
   position: relative;
-  margin-bottom: 100rem;
   // holding the text and aligning the circle
   .feature__box {
     min-height: 60rem;
@@ -147,6 +147,66 @@
       top: -25%;
       width: 40%;
       left: 0;
+    }
+  }
+}
+
+.feature--three {
+  padding: 8rem 0 15rem 0;
+  position: relative;
+  overflow: hidden;
+
+  @include media-breakpoint-up(xl) {
+    padding: 15rem 0 15rem 0;
+  }
+
+  .feature {
+    &__heading {
+      text-align: center;
+    }
+
+    // box = items + illusteration
+    &__box {
+      @include media-breakpoint-up(xl) {
+        display: block;
+      }
+    }
+
+    &__illustration {
+      @include svgSetup("../../images/illustration-laptop-mobile.svg");
+      position: static;
+      height: 30rem;
+
+      @include media-breakpoint-up(md) {
+        height: 35rem;
+      }
+
+      @include media-breakpoint-up(xl) {
+        @include svgSetup("../../images/illustration-laptop-desktop.svg");
+        width: 50%;
+        height: 80rem;
+        background-position: left center;
+        top: 10%;
+        left: -14%;
+        // margin-left: 10rem;
+      }
+    }
+
+    &__items {
+      margin: 3rem 0 0 0;
+      text-align: center;
+      @include media-breakpoint-up(md) {
+        margin-top: 5rem;
+      }
+      @include media-breakpoint-up(xl) {
+        margin-top: 9rem;
+        padding: 0 0rem 0 52.5%;
+        text-align: left;
+      }
+      .feature__item {
+        margin-bottom: 4rem;
+        padding: 0 1rem;
+      }
     }
   }
 }

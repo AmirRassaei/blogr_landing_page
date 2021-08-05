@@ -300,6 +300,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
+    width: 50%;
     height: 75rem;
     background-position: right center;
     top: 5rem;
@@ -331,7 +332,6 @@ body {
 
 .feature--two {
   position: relative;
-  margin-bottom: 100rem;
 }
 .feature--two .feature__box {
   min-height: 60rem;
@@ -427,6 +427,75 @@ body {
     width: 40%;
     left: 0;
   }
+}
+
+.feature--three {
+  padding: 8rem 0 15rem 0;
+  position: relative;
+  overflow: hidden;
+}
+@media screen and (min-width: 1200px) {
+  .feature--three {
+    padding: 15rem 0 15rem 0;
+  }
+}
+.feature--three .feature__heading {
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .feature--three .feature__box {
+    display: block;
+  }
+}
+.feature--three .feature__illustration {
+  width: 100%;
+  background-image: url("../../images/illustration-laptop-mobile.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  position: static;
+  height: 30rem;
+}
+@media screen and (min-width: 768px) {
+  .feature--three .feature__illustration {
+    height: 35rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .feature--three .feature__illustration {
+    width: 100%;
+    background-image: url("../../images/illustration-laptop-desktop.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    width: 50%;
+    height: 80rem;
+    background-position: left center;
+    top: 10%;
+    left: -14%;
+  }
+}
+.feature--three .feature__items {
+  margin: 3rem 0 0 0;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .feature--three .feature__items {
+    margin-top: 5rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .feature--three .feature__items {
+    margin-top: 9rem;
+    padding: 0 0rem 0 52.5%;
+    text-align: left;
+  }
+}
+.feature--three .feature__items .feature__item {
+  margin-bottom: 4rem;
+  padding: 0 1rem;
 }
 
 /*# sourceMappingURL=main.css.map */
