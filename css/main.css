@@ -88,15 +88,20 @@ body {
 .feature--two .feature__item .item__heading {
   text-transform: capitalize;
   color: #fff;
-  font-size: 3.2rem;
+  font-size: 2.4rem;
 }
 @media screen and (min-width: 768px) {
   .feature--two .feature__item .item__heading {
-    font-size: 3.4rem;
+    font-size: 2.8rem;
   }
 }
 .feature--two .feature__item .item__text {
   color: #f7f7f7;
+}
+@media screen and (min-width: 768px) {
+  .feature--two .feature__item .item__text {
+    font-size: 1.4rem;
+  }
 }
 
 .container {
@@ -260,7 +265,7 @@ body {
 }
 
 .feature--one {
-  padding: 8rem 0 30rem 0;
+  padding: 8rem 0 24rem 0;
   overflow: hidden;
   position: relative;
 }
@@ -309,7 +314,7 @@ body {
   }
 }
 .feature--one .feature__items {
-  padding: 0 2rem;
+  padding: 0 3rem;
   margin: 3rem auto 0 auto;
   text-align: center;
 }
@@ -334,8 +339,8 @@ body {
 .feature--two {
   position: relative;
 }
-.feature--two .feature__box {
-  min-height: 60rem;
+.feature--two .feature__container {
+  min-height: 50rem;
   height: 75vh;
   position: relative;
   overflow: hidden;
@@ -343,45 +348,42 @@ body {
   background-image: linear-gradient(to right bottom, #292a3c, #3e4164);
 }
 @media screen and (min-width: 576px) {
-  .feature--two .feature__box {
-    height: 60vh;
+  .feature--two .feature__container {
+    height: 50vh;
   }
 }
 @media screen and (min-width: 1200px) {
-  .feature--two .feature__box {
+  .feature--two .feature__container {
     min-height: 30rem;
-    height: 45vh;
+    height: 30vh;
   }
 }
-.feature--two .feature__box .feature__illustration-circle {
+.feature--two .feature__container .feature__illustration-circle {
   width: 100%;
   background-image: url("../../images/bg-pattern-circles.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
-  min-height: 30rem;
-  height: 70vh;
-  top: -25vh;
+  min-height: 50rem;
+  top: -20rem;
   left: 0;
-  transform: scale(1.4);
+  transform: scale(1.5);
 }
 @media screen and (min-width: 576px) {
-  .feature--two .feature__box .feature__illustration-circle {
-    height: 65vh;
+  .feature--two .feature__container .feature__illustration-circle {
+    height: 50rem;
   }
 }
 @media screen and (min-width: 1200px) {
-  .feature--two .feature__box .feature__illustration-circle {
-    min-height: 50rem;
-    height: 70vh;
+  .feature--two .feature__container .feature__illustration-circle {
     width: 50%;
-    left: -5vw;
-    top: -80%;
-    transform: scale(1.8);
+    left: -15rem;
+    top: -25rem;
+    transform: scale(2);
   }
 }
-.feature--two .feature__box .feature__item {
+.feature--two .feature__container .feature__item {
   position: absolute;
   padding: 0 2rem;
   top: 40%;
@@ -389,17 +391,17 @@ body {
   z-index: 2;
 }
 @media screen and (min-width: 768px) {
-  .feature--two .feature__box .feature__item {
+  .feature--two .feature__container .feature__item {
     top: 50%;
     transform: translate(0, -50%);
     padding: 0 5rem;
   }
 }
 @media screen and (min-width: 1200px) {
-  .feature--two .feature__box .feature__item {
+  .feature--two .feature__container .feature__item {
     text-align: left;
-    margin-left: 50%;
-    padding: 5rem;
+    left: 50%;
+    padding: 0 20rem 0 2rem;
   }
 }
 .feature--two .feature__illustration-phone {
@@ -409,94 +411,22 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
-  min-height: 35rem;
-  height: 50vh;
-  top: -25vh;
+  min-height: 40rem;
+  top: -20rem;
   left: 0;
 }
 @media screen and (min-width: 768px) {
   .feature--two .feature__illustration-phone {
-    height: 45vh;
-    top: -22vh;
+    height: 45rem;
+    top: -24rem;
   }
 }
 @media screen and (min-width: 1200px) {
   .feature--two .feature__illustration-phone {
-    min-height: 45rem;
-    height: 70vh;
-    top: -25%;
+    height: 50rem;
+    top: -10rem;
     width: 40%;
-    left: 0;
   }
-}
-
-.feature--three {
-  padding: 8rem 0 15rem 0;
-  position: relative;
-  overflow: hidden;
-}
-@media screen and (min-width: 1200px) {
-  .feature--three {
-    padding: 15rem 0 15rem 0;
-  }
-}
-.feature--three .feature__heading {
-  text-align: center;
-}
-@media screen and (min-width: 1200px) {
-  .feature--three .feature__box {
-    display: block;
-  }
-}
-.feature--three .feature__illustration {
-  width: 100%;
-  background-image: url("../../images/illustration-laptop-mobile.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  position: absolute;
-  position: static;
-  height: 30rem;
-}
-@media screen and (min-width: 768px) {
-  .feature--three .feature__illustration {
-    height: 35rem;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .feature--three .feature__illustration {
-    width: 100%;
-    background-image: url("../../images/illustration-laptop-desktop.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: absolute;
-    width: 50%;
-    height: 80rem;
-    background-position: left center;
-    top: 10%;
-    left: -14%;
-  }
-}
-.feature--three .feature__items {
-  margin: 3rem 0 0 0;
-  text-align: center;
-}
-@media screen and (min-width: 768px) {
-  .feature--three .feature__items {
-    margin-top: 5rem;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .feature--three .feature__items {
-    margin-top: 9rem;
-    padding: 0 0rem 0 52.5%;
-    text-align: left;
-  }
-}
-.feature--three .feature__items .feature__item {
-  margin-bottom: 4rem;
-  padding: 0 1rem;
 }
 
 /*# sourceMappingURL=main.css.map */

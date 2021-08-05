@@ -2,7 +2,7 @@
 @import "../abstracts/mixins";
 
 .feature--one {
-  padding: 8rem 0 30rem 0;
+  padding: 8rem 0 24rem 0;
   overflow: hidden;
   position: relative;
 
@@ -44,7 +44,7 @@
     }
 
     &__items {
-      padding: 0 2rem;
+      padding: 0 3rem;
       margin: 3rem auto 0 auto;
       text-align: center;
 
@@ -76,17 +76,16 @@
 .feature--two {
   // aligning the phone illustration
   position: relative;
+
   // holding the text and aligning the circle
-  .feature__box {
-    min-height: 60rem;
+  .feature__container {
+    min-height: 50rem;
     height: 75vh;
     position: relative;
 
     // overflow hidden for circle illus
     overflow: hidden;
 
-    // adding more white space around the content = feature__text-box
-    // padding: 0 5rem;
     border-radius: 0 $sec-border-radius 0 $sec-border-radius;
     background-image: linear-gradient(
       to right bottom,
@@ -96,31 +95,30 @@
 
     // smaller height on bigger screen
     @include media-breakpoint-up(sm) {
-      height: 60vh;
+      height: 50vh;
     }
     @include media-breakpoint-up(xl) {
       min-height: 30rem;
-      height: 45vh;
+      height: 30vh;
     }
 
     .feature__illustration-circle {
       @include svgSetup("../../images/bg-pattern-circles.svg");
-      min-height: 30rem;
-      height: 70vh;
-      top: -25vh;
+      min-height: 50rem;
+      top: -20rem;
       left: 0;
-      transform: scale(1.4);
+      transform: scale(1.5);
+
       // the height of the section decreases on larger screens so the circle should be smaller as well
       @include media-breakpoint-up(sm) {
-        height: 65vh;
+        height: 50rem;
       }
+
       @include media-breakpoint-up(xl) {
-        min-height: 50rem;
-        height: 70vh;
         width: 50%;
-        left: -5vw;
-        top: -80%;
-        transform: scale(1.8);
+        left: -15rem;
+        top: -25rem;
+        transform: scale(2);
       }
     }
 
@@ -137,88 +135,85 @@
       }
       @include media-breakpoint-up(xl) {
         text-align: left;
-        margin-left: 50%;
-        padding: 5rem;
+        left: 50%;
+        padding: 0 20rem 0 2rem;
       }
     }
   }
 
   .feature__illustration-phone {
     @include svgSetup("../../images/illustration-phones.svg");
-    min-height: 35rem;
-    height: 50vh;
-    top: -25vh;
+    min-height: 40rem;
+    top: -20rem;
     left: 0;
     @include media-breakpoint-up(md) {
-      height: 45vh;
-      top: -22vh;
+      height: 45rem;
+      top: -24rem;
     }
     @include media-breakpoint-up(xl) {
-      min-height: 45rem;
-      height: 70vh;
-      top: -25%;
+      height: 50rem;
+      top: -10rem;
       width: 40%;
-      left: 0;
     }
   }
 }
 
-.feature--three {
-  padding: 8rem 0 15rem 0;
-  position: relative;
-  overflow: hidden;
+// .feature--three {
+//   padding: 8rem 0 15rem 0;
+//   position: relative;
+//   overflow: hidden;
 
-  @include media-breakpoint-up(xl) {
-    padding: 15rem 0 15rem 0;
-  }
+//   @include media-breakpoint-up(xl) {
+//     padding: 15rem 0 15rem 0;
+//   }
 
-  .feature {
-    &__heading {
-      text-align: center;
-    }
+//   .feature {
+//     &__heading {
+//       text-align: center;
+//     }
 
-    // box = items + illusteration
-    &__box {
-      @include media-breakpoint-up(xl) {
-        display: block;
-      }
-    }
+//     // box = items + illusteration
+//     &__box {
+//       @include media-breakpoint-up(xl) {
+//         display: block;
+//       }
+//     }
 
-    &__illustration {
-      @include svgSetup("../../images/illustration-laptop-mobile.svg");
-      position: static;
-      height: 30rem;
+//     &__illustration {
+//       @include svgSetup("../../images/illustration-laptop-mobile.svg");
+//       position: static;
+//       height: 30rem;
 
-      @include media-breakpoint-up(md) {
-        height: 35rem;
-      }
+//       @include media-breakpoint-up(md) {
+//         height: 35rem;
+//       }
 
-      @include media-breakpoint-up(xl) {
-        @include svgSetup("../../images/illustration-laptop-desktop.svg");
-        width: 50%;
-        height: 80rem;
-        background-position: left center;
-        top: 10%;
-        left: -14%;
-        // margin-left: 10rem;
-      }
-    }
+//       @include media-breakpoint-up(xl) {
+//         @include svgSetup("../../images/illustration-laptop-desktop.svg");
+//         width: 50%;
+//         height: 80rem;
+//         background-position: left center;
+//         top: 10%;
+//         left: -14%;
+//         // margin-left: 10rem;
+//       }
+//     }
 
-    &__items {
-      margin: 3rem 0 0 0;
-      text-align: center;
-      @include media-breakpoint-up(md) {
-        margin-top: 5rem;
-      }
-      @include media-breakpoint-up(xl) {
-        margin-top: 9rem;
-        padding: 0 0rem 0 52.5%;
-        text-align: left;
-      }
-      .feature__item {
-        margin-bottom: 4rem;
-        padding: 0 1rem;
-      }
-    }
-  }
-}
+//     &__items {
+//       margin: 3rem 0 0 0;
+//       text-align: center;
+//       @include media-breakpoint-up(md) {
+//         margin-top: 5rem;
+//       }
+//       @include media-breakpoint-up(xl) {
+//         margin-top: 9rem;
+//         padding: 0 0rem 0 52.5%;
+//         text-align: left;
+//       }
+//       .feature__item {
+//         margin-bottom: 4rem;
+//         padding: 0 1rem;
+//       }
+//     }
+//   }
+// }
