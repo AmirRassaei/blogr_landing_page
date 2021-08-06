@@ -49,7 +49,6 @@ body {
 }
 
 // feature section
-
 .item__text {
   color: $body-color;
   font-weight: 300;
@@ -73,6 +72,44 @@ body {
       @include media-breakpoint-up(md) {
         font-size: 1.4rem;
       }
+    }
+  }
+}
+
+// footer
+.nav {
+  &__logo--link {
+    font-size: 4rem;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  &__heading {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: $color-white;
+    text-transform: capitalize;
+    @include media-breakpoint-up(sm) {
+      font-size: 1.6rem;
+    }
+    @include media-breakpoint-up(lg) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__item {
+    list-style-type: none;
+  }
+
+  &__link {
+    font-size: 1.75rem;
+    text-transform: capitalize;
+    color: rgba($color: #fff, $alpha: 0.8);
+    @include media-breakpoint-up(sm) {
+      font-size: 1.6rem;
+    }
+    @include media-breakpoint-up(lg) {
+      font-size: 1.33rem;
     }
   }
 }

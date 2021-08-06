@@ -1,0 +1,48 @@
+@import url(../abstracts/_variables.scss);
+
+.footer {
+  min-height: 35vh;
+  background-color: $color-gradient-start;
+  border-radius: 0 $sec-border-radius 0 0;
+  padding: 5rem;
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    @include media-breakpoint-up(md) {
+      flex-direction: row;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+    }
+    @include media-breakpoint-up(xl) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  .nav {
+    &__logo {
+      margin-bottom: 3.5rem;
+      flex: 1 0 100%;
+      @include media-breakpoint-up(lg) {
+        flex: 0 0 auto;
+      }
+    }
+
+    &__group {
+      margin-bottom: 3rem;
+      @include media-breakpoint-up(lg) {
+        margin-top: 2rem;
+        margin-bottom: 0;
+      }
+    }
+
+    &__link {
+      display: inline-block;
+      padding: 0.5rem;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
