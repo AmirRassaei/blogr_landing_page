@@ -3,10 +3,10 @@
 .btn {
   width: 15rem;
   display: inline-block;
-  background-color: #ccc;
   padding: 1rem 2rem;
   border-radius: 5rem;
   font-weight: 700;
+  text-align: center;
   &-fill {
     background-color: #fff;
     color: $text-primary;
