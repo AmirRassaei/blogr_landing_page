@@ -196,6 +196,11 @@ body {
     padding: 3rem 6rem;
   }
 }
+@media screen and (min-width: 768px) {
+  .header .nav__logo {
+    margin-right: auto;
+  }
+}
 @media screen and (min-width: 992px) {
   .header .nav__logo {
     margin-right: 4rem;
@@ -209,7 +214,7 @@ body {
 .header .nav__nav {
   display: none;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
   .header .nav__nav {
     display: flex;
     margin-top: 2rem;
@@ -299,10 +304,10 @@ body {
   }
 }
 .header .nav__toggler {
-  margin: 1.3rem 0 0 auto;
+  margin: 0.9rem 0 0 auto;
   cursor: pointer;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
   .header .nav__toggler {
     display: none;
   }

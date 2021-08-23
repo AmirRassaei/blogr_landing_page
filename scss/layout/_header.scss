@@ -29,6 +29,9 @@
     }
 
     &__logo {
+      @include media-breakpoint-up(md) {
+        margin-right: auto;
+      }
       @include media-breakpoint-up(lg) {
         margin-right: 4rem;
       }
@@ -40,7 +43,7 @@
     // navigation links' container
     &__nav {
       display: none;
-      @include media-breakpoint-up(lg) {
+      @include media-breakpoint-up(md) {
         display: flex;
         margin-top: 2rem;
       }
@@ -141,9 +144,9 @@
     }
 
     &__toggler {
-      margin: 1.3rem 0 0 auto;
+      margin: 0.9rem 0 0 auto;
       cursor: pointer;
-      @include media-breakpoint-up(lg) {
+      @include media-breakpoint-up(md) {
         display: none;
       }
 
