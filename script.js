@@ -1,6 +1,5 @@
 // selectors
-const togglerBox = document.querySelector(".nav__toggler");
-const togglerIcon = document.querySelector(".nav__toggler--icon");
+const togglerBox = document.querySelector(".navbar__toggler");
 
 // events
 togglerBox.addEventListener("click", function (e) {

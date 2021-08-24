@@ -1,47 +1,20 @@
 @import "../abstracts/variables";
+
 body {
   font-family: "Ubuntu", sans-serif;
   font-size: 1.6rem;
   line-height: 1.5;
 }
 
-.heading-primary {
-  font-family: "overpass";
-  color: #fff;
-  font-size: $heading-primary-font-size;
-  font-weight: 600;
-  margin-bottom: 1.5rem;
-}
-
-.heading-secondary {
-  font-family: "overpass";
-  color: $heading-color;
-  font-size: $heading-secondary-font-size;
-  font-weight: 600;
-  margin-bottom: 1.5rem;
-}
-
-.heading-tertiary {
-  font-family: "overpass";
-  color: $heading-color;
-  font-size: $heading-tertiary-font-size;
-  font-weight: 600;
-  margin-bottom: 1.5rem;
-}
-
-.header__heading--sub {
-  font-family: "overpass";
-  color: #fff;
-  font-size: 1.6rem;
-  font-weight: 300;
-  margin-bottom: 1.5rem;
-}
-
 // header
 .header {
-  &__heading--primary {
-    font-size: 3.6rem;
+  .nav__logo--link {
+    font-size: 4rem;
+    color: #fff;
+    text-decoration: none;
+  }
 
+  &__heading--primary {
     @include media-breakpoint-up(lg) {
       font-size: 4.2rem;
     }
@@ -49,66 +22,67 @@ body {
 }
 
 // feature section
-.item__text {
-  color: $body-color;
-  font-weight: 300;
-  line-height: 2;
+.features {
+  .item__text {
+    color: $body-color;
+    font-weight: 300;
+    line-height: 2;
+  }
+
+  .feature--two {
+    .feature__item {
+      text-align: center;
+
+      .item__heading {
+        text-transform: capitalize;
+        color: #fff;
+        font-size: 2.4rem;
+        @include media-breakpoint-up(md) {
+          font-size: 2.8rem;
+        }
+      }
+      .item__text {
+        color: #f7f7f7;
+        @include media-breakpoint-up(md) {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
 }
 
-.feature--two {
-  .feature__item {
-    text-align: center;
-
-    .item__heading {
-      text-transform: capitalize;
+// footer
+.footer__nav {
+  .nav {
+    &__logo--link {
+      font-size: 4rem;
       color: #fff;
-      font-size: 2.4rem;
-      @include media-breakpoint-up(md) {
-        font-size: 2.8rem;
+      text-decoration: none;
+    }
+
+    &__heading {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: $color-white;
+      text-transform: capitalize;
+      @include media-breakpoint-up(sm) {
+        font-size: 1.6rem;
+      }
+      @include media-breakpoint-up(lg) {
+        font-size: 1.5rem;
       }
     }
-    .item__text {
-      color: #f7f7f7;
-      @include media-breakpoint-up(md) {
-        font-size: 1.4rem;
+
+    &__link {
+      font-size: 1.75rem;
+      text-transform: capitalize;
+      color: rgba($color: #fff, $alpha: 0.8);
+      @include media-breakpoint-up(sm) {
+        font-size: 1.6rem;
       }
-    }
-  }
-}
-
-.nav {
-  &__logo--link {
-    font-size: 4rem;
-    color: #fff;
-    text-decoration: none;
-  }
-
-  &__heading {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: $color-white;
-    text-transform: capitalize;
-    @include media-breakpoint-up(sm) {
-      font-size: 1.6rem;
-    }
-    @include media-breakpoint-up(lg) {
-      font-size: 1.5rem;
-    }
-  }
-
-  &__item {
-    list-style-type: none;
-  }
-
-  &__link {
-    font-size: 1.75rem;
-    text-transform: capitalize;
-    color: rgba($color: #fff, $alpha: 0.8);
-    @include media-breakpoint-up(sm) {
-      font-size: 1.6rem;
-    }
-    @include media-breakpoint-up(lg) {
-      font-size: 1.33rem;
+      @include media-breakpoint-up(lg) {
+        font-size: 1.33rem;
+      }
     }
   }
 }

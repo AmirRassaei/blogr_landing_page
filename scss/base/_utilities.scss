@@ -25,3 +25,35 @@
 .text-center {
   text-align: center;
 }
+
+.heading-primary {
+  font-family: "overpass";
+  color: #fff;
+  font-size: $heading-primary-font-size;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.heading-secondary {
+  font-family: "overpass";
+  color: $heading-color;
+  font-size: $heading-secondary-font-size;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.heading-tertiary {
+  font-family: "overpass";
+  color: $heading-color;
+  font-size: $heading-tertiary-font-size;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.header__heading--sub {
+  font-family: "overpass";
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
