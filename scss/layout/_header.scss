@@ -21,175 +21,6 @@
     }
   }
 
-  .navbar {
-    display: flex;
-    padding: 3rem;
-    @include media-breakpoint-up(sm) {
-      padding: 3rem 6rem;
-    }
-
-    &__logo {
-      @include media-breakpoint-up(md) {
-        margin-right: auto;
-      }
-      @include media-breakpoint-up(lg) {
-        margin-right: 4rem;
-      }
-      @include media-breakpoint-up(xl) {
-        margin-right: 8rem;
-      }
-    }
-
-    // navigation links' container
-    &__collapse {
-      display: none;
-    }
-
-    @include media-breakpoint-up(md) {
-      &__collapse {
-        .navbar__nav {
-          display: none;
-          @include media-breakpoint-up(md) {
-            display: flex;
-            margin-top: 2.4rem;
-          }
-          .nav__item {
-            position: relative;
-            margin-right: 1.6rem;
-            .nav__link {
-              display: block;
-              font-size: 1.5rem;
-              padding-bottom: 1rem;
-              &-arrow {
-                display: inline-block;
-                width: 1rem;
-                height: 1rem;
-                background-image: url(../../images/icon-arrow-light.svg);
-                background-repeat: no-repeat;
-                background-position: 0 55%;
-                margin-left: 1rem;
-                transform: scale(1.2);
-              }
-
-              &::before {
-                display: block;
-                content: attr(data-view);
-                font-weight: 500;
-                height: 0;
-                padding: 0rem 1rem;
-                overflow: hidden;
-                visibility: hidden;
-              }
-            }
-            .nav__sub-menu {
-              display: none;
-              position: absolute;
-              padding: 2rem 4rem 2rem 2rem;
-              background-color: #fff;
-              border-radius: 0.8rem;
-              box-shadow: 0 0 5rem -2rem #444;
-
-              // left = sub-menu__paddingLeft + sub-menu_link__paddingLeft
-              left: -3.2rem;
-              top: 3rem;
-              // higher z-index = 5 bc of conflict with nav_text-box
-              z-index: 5;
-
-              .sub-menu__item {
-                .sub-menu__link {
-                  display: block;
-                  color: #000;
-                  font-size: 1.4rem;
-                  font-weight: 300;
-                  padding: 0.4rem 1.2rem;
-                  &:hover {
-                    font-weight: bold;
-                  }
-                  // solving width problem when the text turn into bold
-                  &::before {
-                    display: block;
-                    content: attr(data-title);
-                    font-weight: bold;
-                    height: 0;
-                    overflow: hidden;
-                    visibility: hidden;
-                  }
-                }
-              }
-            }
-
-            &:hover .nav__sub-menu {
-              display: block;
-            }
-
-            &:hover {
-              text-decoration: underline;
-              font-weight: 500;
-              color: #fff;
-              & .nav__link-arrow {
-                transform: rotateX(180deg);
-              }
-            }
-          }
-        }
-      }
-    }
-
-    &__toggler {
-      margin: 0.9rem 0 0 auto;
-      cursor: pointer;
-      @include media-breakpoint-up(md) {
-        display: none;
-      }
-
-      &--icon {
-        @include togglerIcon();
-        position: relative;
-        top: 7px;
-        left: 0;
-      }
-
-      &--icon::before,
-      &--icon::after {
-        @include togglerIcon();
-        content: "";
-        border-radius: 5rem;
-        position: absolute;
-      }
-
-      &--icon::before {
-        top: -10px;
-      }
-      &--icon::after {
-        top: 10px;
-      }
-
-      // toggler animation when clicked
-      &.toggle .navbar__toggler--icon {
-        background-color: rgba($color: #000000, $alpha: 0);
-        &::before {
-          top: -4px;
-          transform: rotate(-45deg);
-        }
-        &::after {
-          top: -4px;
-          transform: rotate(-135deg);
-        }
-      }
-    }
-
-    &__btn-group {
-      margin: 1.35rem 0 0 auto;
-      display: none;
-      @include media-breakpoint-up(lg) {
-        display: block;
-        .btn {
-          width: 12rem;
-        }
-      }
-    }
-  }
-
   &__text-box {
     text-align: center;
 
@@ -209,4 +40,273 @@
       }
     }
   }
+}
+
+.navbar {
+  display: flex;
+  padding: 3rem;
+
+  @include media-breakpoint-up(sm) {
+    padding: 3rem 6rem;
+  }
+
+  &__logo {
+    @include media-breakpoint-up(md) {
+      margin-right: auto;
+    }
+    @include media-breakpoint-up(lg) {
+      margin-right: 4rem;
+    }
+    @include media-breakpoint-up(xl) {
+      margin-right: 8rem;
+    }
+  }
+
+  // navigation links' container
+  &__collapse {
+    display: block;
+    // background-color: rgba($color: #000, $alpha: 0.9);
+    min-width: 100vw;
+    position: absolute;
+    transition: top 0.5s ease;
+    top: -150%;
+    left: 0;
+    z-index: 12;
+
+    // the padding is relative to navbar padding
+    padding: 3rem;
+    @include media-breakpoint-up(sm) {
+      padding: 3rem 6rem;
+    }
+
+    // flex container
+    .navbar__nav {
+      background-color: #fff;
+      border-radius: 1rem;
+      display: flex;
+      padding: 4rem;
+      flex-direction: column;
+      text-align: center;
+
+      // flex-item
+      .nav__item {
+        text-align: center;
+        &:not(:last-child) {
+          margin-bottom: 2rem;
+        }
+
+        .nav__link {
+          display: block;
+          font-size: 2rem;
+          padding: 0.5rem;
+          color: $heading-color;
+
+          &-arrow {
+            display: inline-block;
+            width: 1.4rem;
+            height: 1rem;
+            background-image: url(../../images/icon-arrow-dark.svg);
+            background-repeat: no-repeat;
+            background-position: 0 55%;
+            transform: scale(1.2);
+            margin-left: 1rem;
+          }
+        }
+
+        .nav__sub-menu {
+          margin-top: 0.5rem;
+          display: none;
+          background-color: rgba($color: #eee, $alpha: 0.9);
+          border-radius: 1rem;
+          transition: all 0.2s ease;
+
+          .sub-menu__item {
+            .sub-menu__link {
+              display: block;
+              font-size: 1.7rem;
+              padding: 1rem 2rem;
+              color: rgba($color: $heading-color, $alpha: 0.8);
+            }
+          }
+        }
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      // reseting mobile style
+      display: block;
+      position: static;
+      transform: none;
+      min-width: auto;
+      min-height: auto;
+      background-color: unset;
+      padding: 0;
+      //
+      .navbar__nav {
+        display: flex;
+        flex-direction: row;
+        margin-top: 2.4rem;
+        padding: 0;
+        background-color: unset;
+
+        .nav__item {
+          position: relative;
+          margin-right: 1.6rem;
+          &:not(:last-child) {
+            margin-bottom: 0rem;
+          }
+          .nav__link {
+            display: block;
+            font-size: 1.5rem;
+            padding: 0 0 1.5rem 0;
+            color: #fff;
+
+            &-arrow {
+              display: inline-block;
+              width: 1.2rem;
+              height: 1.2rem;
+              background-image: url(../../images/icon-arrow-light.svg);
+              background-repeat: no-repeat;
+              background-position: 0 55%;
+              margin-left: 1rem;
+              transform: scale(1.2);
+            }
+
+            &::before {
+              display: block;
+              content: attr(data-view);
+              font-weight: 500;
+              width: auto;
+              height: 0;
+              padding: 0 1.5rem;
+              overflow: hidden;
+              visibility: hidden;
+            }
+          }
+          .nav__sub-menu {
+            display: none;
+            position: absolute;
+            padding: 2rem 4rem 2rem 2rem;
+            background-color: #fff;
+            border-radius: 0.8rem;
+            box-shadow: 0 0 5rem -2rem #444;
+
+            // left = sub-menu__paddingLeft + sub-menu_link__paddingLeft
+            left: -3.2rem;
+            top: 3rem;
+            // higher z-index = 5 bc of conflict with nav_text-box
+            z-index: 5;
+
+            .sub-menu__item {
+              .sub-menu__link {
+                display: block;
+                color: #000;
+                font-size: 1.4rem;
+                font-weight: 300;
+                padding: 0.4rem 1.2rem;
+                &:hover {
+                  font-weight: bold;
+                }
+
+                // solving width problem when the text turn into bold
+                &::before {
+                  display: block;
+                  content: attr(data-title);
+                  font-weight: bold;
+                  height: 0;
+                  overflow: hidden;
+                  visibility: hidden;
+                }
+              }
+            }
+          }
+
+          &:hover .nav__sub-menu {
+            display: block;
+          }
+
+          &:hover {
+            text-decoration: underline;
+            font-weight: 500;
+            color: #fff;
+            & .nav__link-arrow {
+              transform: rotateX(180deg);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__toggler {
+    margin: 1rem 0 0 auto;
+    cursor: pointer;
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+
+    &--icon {
+      @include togglerIcon();
+      position: relative;
+      top: 7px;
+      left: 0;
+    }
+
+    &--icon::before,
+    &--icon::after {
+      @include togglerIcon();
+      content: "";
+      border-radius: 5rem;
+      position: absolute;
+    }
+
+    &--icon::before {
+      top: -10px;
+    }
+    &--icon::after {
+      top: 10px;
+    }
+
+    // toggler animation when clicked
+    &.toggler-active .navbar__toggler--icon {
+      background-color: rgba($color: #000000, $alpha: 0);
+      &::before {
+        top: -4px;
+        transform: rotate(-45deg);
+      }
+      &::after {
+        top: -4px;
+        transform: rotate(-135deg);
+      }
+    }
+  }
+
+  &__btn-group {
+    display: none;
+    @include media-breakpoint-up(lg) {
+      margin: 1.35rem 0 0 auto;
+      display: flex;
+      .btn {
+        width: 12rem;
+      }
+    }
+  }
+}
+
+// js classes
+
+.nav-active {
+  top: 15%;
+  left: 0;
+}
+
+.toggler-active {
+}
+
+.sub-menu-active {
+  display: block !important;
+}
+
+.rotate-arrow {
+  transform: rotateX(180deg) !important;
 }
