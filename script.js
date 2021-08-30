@@ -11,7 +11,6 @@ const subMenus = document.querySelectorAll(".nav__sub-menu");
 const navArrows = document.querySelectorAll(".nav__link-arrow");
 
 // events
-
 const activateNav = () => {
   burger.addEventListener("click", function (e) {
     e.preventDefault();
@@ -37,11 +36,9 @@ const activateNav = () => {
   // open the sub-menu
   navLinks.addEventListener("click", (e) => {
     // stop the event on desktop version
-    if (navIsActive) {
-      if (e.target.parentElement.children[1]) {
-        e.target.parentElement.children[1].classList.toggle("sub-menu-active");
-        e.target.children[0].classList.toggle("rotate-arrow");
-      }
+    if (navIsActive && e.target.parentElement.children[1]) {
+      e.target.parentElement.children[1].classList.toggle("sub-menu-active");
+      e.target.children[0].classList.toggle("rotate-arrow");
     }
   });
 
@@ -54,4 +51,3 @@ const app = () => {
 
 app();
 
-//FIXME  2) btn-group
